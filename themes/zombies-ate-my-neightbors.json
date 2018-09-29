@@ -24,7 +24,7 @@
 		"editor.lineHighlightBackground": "#161616",
 		"editor.selectionBackground": "#878b9180",
 		"editor.selectionHighlightBackground": "#575b6180",
-		"editorCursor.foreground": "#f8f8f0",
+		"editorCursor.foreground": "#0080ff",
 		"editorGroup.border": "#414339",
 		"editorGroup.dropBackground": "#41433980",
 		"editorGroupHeader.tabsBackground": "#161616",
@@ -215,9 +215,9 @@
 			"scope": [
 				"meta.class.js entity.name.type.class.js",
 				"meta.class.js entity.other.inherited-class.js",
-				"meta.class.js storage.type.js",
 				"meta.class.js meta.definition.method.js",
-				"meta.class.js meta.field.declaration.js"
+				"meta.class.js meta.field.declaration.js",
+				"meta.class.js storage.type.js"
 			],
 			"settings": {
 				"foreground": "#0eff00"
@@ -246,11 +246,11 @@
 		{
 			"name": "Objects - Value",
 			"scope": [
-				"meta.objectliteral.js meta.object.member.js",
 				"constant.language.boolean.false.js",
 				"constant.language.boolean.true.js",
 				"constant.numeric.decimal.js",
 				"meta.objectliteral.js meta.brace.square.js",
+				"meta.objectliteral.js meta.object.member.js",
 				"source.json meta.structure.dictionary.value.json"
 			],
 			"settings": {
@@ -303,7 +303,7 @@
 		{
 			"name": "Tag attribute",
 			"scope": [
-				"entity.other.attribute-name"
+				"meta.tag meta.tag.attributes entity.other.attribute-name"
 			],
 			"settings": {
 				"fontStyle": "",
@@ -313,19 +313,21 @@
 		{
 			"name": "CSS/SCSS - Punctuation",
 			"scope": [
-				"source.css.scss punctuation.section.function.scss",
-				"source.css.scss punctuation.separator.key-value.scss",
-				"source.css.scss punctuation.terminator.rule.scss",
-				"source.css.scss support.constant.media.css",
-				"source.css.scss punctuation.definition.media-query.begin.bracket.round.scss",
-				"source.css.scss punctuation.definition.media-query.end.bracket.round.scss",
-				"source.css.scss punctuation.section.property-list.begin.bracket.curly.scss",
-				"source.css.scss punctuation.section.property-list.end.bracket.curly.scss",
-				"source.css.scss punctuation.definition.parameters.begin.bracket.round.scss",
-				"source.css.scss punctuation.definition.parameters.end.bracket.round.scss",
-				"source.css.scss variable.interpolation.scss",
-				"source.css.scss entity.name.tag.css",
-				"source.css.scss meta.property-list.scss entity.name.tag.css"
+				"source.css entity.name.tag.css",
+				"source.css meta.property-list entity.other.attribute-name.pseudo-element.css",
+				"source.css punctuation.definition.media-query.begin.bracket.round",
+				"source.css punctuation.definition.media-query.end.bracket.round",
+				"source.css punctuation.definition.parameters.begin.bracket.round",
+				"source.css punctuation.definition.parameters.end.bracket.round",
+				"source.css punctuation.section.function",
+				"source.css punctuation.section.keyframes",
+				"source.css punctuation.section.property-list.begin.bracket.curly",
+				"source.css punctuation.section.property-list.end.bracket.curly",
+				"source.css punctuation.separator.key-value",
+				"source.css punctuation.terminator.rule",
+				"source.css support.constant.media.css",
+				"source.css variable.interpolation",
+				"source.css meta.property-list entity.name.tag.reference"
 			],
 			"settings": {
 				"foreground": "#808080"
@@ -334,8 +336,8 @@
 		{
 			"name": "CSS/SCSS - Variables",
 			"scope": [
-				"source.css.scss meta.property-value.scss variable.scss",
-				"source.css.scss variable.interpolation.scss variable.scss"
+				"source.css meta.property-value variable",
+				"source.css variable.interpolation variable"
 			],
 			"settings": {
 				"foreground": "#FD971F"
@@ -344,9 +346,10 @@
 		{
 			"name": "CSS/SCSS - Classes",
 			"scope": [
-				"source.css.scss meta.property-list.scss variable.scss",
-				"source.css.scss meta.property-list.scss meta.at-rule.extend.scss",
-				"source.css.scss entity.other.attribute-name.id.css"
+				"source.css meta.property-list variable",
+				"source.css meta.property-list meta.at-rule.extend",
+				"source.css entity.other.attribute-name.id.css",
+				"source.css entity.other.attribute-name.class.css"
 			],
 			"settings": {
 				"foreground": "#0eff00"
@@ -355,16 +358,30 @@
 		{
 			"name": "CSS/SCSS - Keywords",
 			"scope": [
-				"source.css.scss meta.property-name.scss",	
-				"source.css.scss support.constant.property-value.css",	
-				"source.css.scss support.function.misc.scss",	
-				"source.css.scss support.type.property-name.css",	
-				"source.css.scss support.type.property-name.media.css",	
-				"source.css.scss entity.name.function.scss",	
-				"source.css.scss meta.property-value.scss variable.parameter.url.scss"
+				"source.css meta.property-name",	
+				"source.css support.constant.property-value.css",	
+				"source.css support.function.misc",	
+				"source.css support.type.property-name.css",	
+				"source.css support.type.property-name.media.css",	
+				"source.css entity.name.function",	
+				"source.css meta.property-value variable.parameter.url",
+				"source.css meta.property-list entity.name.tag.css",
+				"source.css meta.property-list meta.property-value"
 			],
 			"settings": {
 				"foreground": "#0080ff"
+			}
+		},
+		{
+			"name": "CSS/SCSS - Other",
+			"scope": [
+				"source.css meta.property-list meta.property-value constant.numeric",
+				"source.css meta.property-list meta.property-value constant.other.color",
+				"source.css meta.property-list meta.property-value support.constant.color",
+				"source.css meta.property-list meta.property-value support.constant.property-value"
+			],
+			"settings": {
+				"foreground": "#ffffff"
 			}
 		},
 		{
