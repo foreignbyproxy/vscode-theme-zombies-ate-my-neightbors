@@ -1,0 +1,19 @@
+{
+	"name": "theme-zombies-ate-my-neightbors",
+	"displayName": "%displayName%",
+	"description": "%description%",
+	"version": "1.0.0",
+	"publisher": "vscode",
+	"engines": {
+		"vscode": "*"
+	},
+	"contributes": {
+		"themes": [
+			{
+				"label": "Zombies Ate My Neighbor",
+				"uiTheme": "vs-dark",
+				"path": "./themes/zombies-ate-my-neightbors.json"
+			}
+		]
+	}
+}
