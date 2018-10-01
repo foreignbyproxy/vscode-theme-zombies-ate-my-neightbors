@@ -110,16 +110,6 @@
 			}
 		},
 		{
-			"scope": [
-				"meta.embedded",
-				"source.groovy.embedded"
-			],
-			"settings": {
-				"background": "#161616",
-				"foreground": "#F8F8F2"
-			}
-		},
-		{
 			"name": "Comment",
 			"scope": "comment",
 			"settings": {
@@ -127,36 +117,24 @@
 			}
 		},
 		{
+			"name": "Puctuation",
+			"scope": [
+				"meta.brace",
+				"meta.object-literal.key",
+				"punctuation"
+			],
+			"settings": {
+				"foreground": "#808080"
+			}
+		},
+		{
 			"name": "String",
-			"scope": "string",
+			"scope": [
+				"string",
+				"string.quoted punctuation.definition.string"
+			],
 			"settings": {
 				"foreground": "#ffffff"
-			}
-		},
-		{
-			"name": "Template Definition",
-			"scope": [
-				"punctuation.definition.template-expression",
-				"punctuation.section.embedded"
-			],
-			"settings": {
-				"foreground": "#808080"
-			}
-		},
-		{
-			"name": "Block Definition",
-			"scope": "punctuation.definition.block.js",
-			"settings": {
-				"foreground": "#808080"
-			}
-		},
-		{
-			"name": "Reset JavaScript string interpolation expression",
-			"scope": [
-				"meta.template.expression"
-			],
-			"settings": {
-				"foreground": "#F8F8F2"
 			}
 		},
 		{
@@ -166,39 +144,28 @@
 				"foreground": "#808080"
 			}
 		},
-
+		{
+			"name": "JS - Base",
+			"scope": "source.js",
+			"settings": {
+				"foreground": "#808080"
+			}
+		},
 		{
 			"name": "JS - Keywords",
 			"scope": [
 				"source.js meta.var.expr.js storage.type.js",
-				"source.js meta.arrow.js",
+				"source.js storage.type.function.arrow.js",
 				"source.js keyword.control.flow.js",
 				"source.js storage.modifier.async.js",
 				"source.js meta.function.js storage.type.function.js",
 				"source.js support.class.builtin.js",
 				"source.js support.class.console.js",
+				"source.js constant.language",
 				"source.js support.function.console.js"
 			],
 			"settings": {
 				"foreground": "#0080ff"
-			}
-		},
-		{
-			"name": "JS - Puctuation",
-			"scope": [
-				"punctuation.definition.block.js",
-				"punctuation.definition.parameters.begin.js",
-				"punctuation.definition.parameters.end.js",
-				"punctuation.definition.binding-pattern.object.js",
-				"meta.brace.round.js",
-				"punctuation.separator.comma.js",
-				"punctuation.terminator.statement.js",
-				"punctuation.accessor.js",
-				"meta.brace.square.js",
-				"meta.object-literal.key.js"
-			],
-			"settings": {
-				"foreground": "#808080"
 			}
 		},
 		{
@@ -290,10 +257,12 @@
 		{
 			"name": "HTML/JSX Tags",
 			"scope": [
-				"meta.tag",
-				"entity.name.tag",
-				"entity.name.tag support.class.component.js",
-				"entity.name.tag meta.tag.attributes.js meta.embedded.expression.js"
+				"meta.tag.structure entity.name.tag",
+				"meta.tag.structure entity.name.tag invalid.illegal.unrecognized-tag",
+				"meta.tag.metadata.style entity.name.tag",
+				"meta.tag entity.name.tag support.class.component",
+				"meta.tag entity.name.tag meta.tag.attributes meta.embedded.expression",
+				"text.html.php"
 			],
 			"settings": {
 				"fontStyle": "",
@@ -301,9 +270,10 @@
 			}
 		},
 		{
-			"name": "Tag attribute",
+			"name": "HTML/JSX attribute",
 			"scope": [
-				"meta.tag meta.tag.attributes entity.other.attribute-name"
+				"meta.tag entity.other.attribute-name",
+				""
 			],
 			"settings": {
 				"fontStyle": "",
@@ -311,23 +281,9 @@
 			}
 		},
 		{
-			"name": "CSS/SCSS - Punctuation",
+			"name": "CSS/SCSS - Base",
 			"scope": [
-				"source.css entity.name.tag.css",
-				"source.css meta.property-list entity.other.attribute-name.pseudo-element.css",
-				"source.css punctuation.definition.media-query.begin.bracket.round",
-				"source.css punctuation.definition.media-query.end.bracket.round",
-				"source.css punctuation.definition.parameters.begin.bracket.round",
-				"source.css punctuation.definition.parameters.end.bracket.round",
-				"source.css punctuation.section.function",
-				"source.css punctuation.section.keyframes",
-				"source.css punctuation.section.property-list.begin.bracket.curly",
-				"source.css punctuation.section.property-list.end.bracket.curly",
-				"source.css punctuation.separator.key-value",
-				"source.css punctuation.terminator.rule",
-				"source.css support.constant.media.css",
-				"source.css variable.interpolation",
-				"source.css meta.property-list entity.name.tag.reference"
+				"source.css"
 			],
 			"settings": {
 				"foreground": "#808080"
@@ -336,20 +292,20 @@
 		{
 			"name": "CSS/SCSS - Variables",
 			"scope": [
-				"source.css meta.property-value variable",
-				"source.css variable.interpolation variable"
+				"source.css variable"
 			],
 			"settings": {
 				"foreground": "#FD971F"
 			}
 		},
 		{
-			"name": "CSS/SCSS - Classes",
+			"name": "CSS/SCSS - Classes and IDs",
 			"scope": [
-				"source.css meta.property-list variable",
 				"source.css meta.property-list meta.at-rule.extend",
-				"source.css entity.other.attribute-name.id.css",
-				"source.css entity.other.attribute-name.class.css"
+				"source.css entity.other.attribute-name.id",
+				"source.css entity.other.attribute-name.class",
+				"source.css entity.other.attribute-name.class punctuation.definition.entity",
+				"source.css entity.other.attribute-name.id punctuation.definition.entity"
 			],
 			"settings": {
 				"foreground": "#0eff00"
@@ -358,15 +314,7 @@
 		{
 			"name": "CSS/SCSS - Keywords",
 			"scope": [
-				"source.css meta.property-name",	
-				"source.css support.constant.property-value.css",	
-				"source.css support.function.misc",	
-				"source.css support.type.property-name.css",	
-				"source.css support.type.property-name.media.css",	
-				"source.css entity.name.function",	
-				"source.css meta.property-value variable.parameter.url",
-				"source.css meta.property-list entity.name.tag.css",
-				"source.css meta.property-list meta.property-value"
+				"source.css meta.property-list meta.property-name"
 			],
 			"settings": {
 				"foreground": "#0080ff"
@@ -377,28 +325,37 @@
 			"scope": [
 				"source.css meta.property-list meta.property-value constant.numeric",
 				"source.css meta.property-list meta.property-value constant.other.color",
-				"source.css meta.property-list meta.property-value support.constant.color",
-				"source.css meta.property-list meta.property-value support.constant.property-value"
+				"source.css meta.property-list meta.property-value support.constant.color"
 			],
 			"settings": {
 				"foreground": "#ffffff"
 			}
 		},
 		{
-			"name": "Invalid",
-			"scope": "invalid",
+			"name": "PHP - Functions",
+			"scope": [
+				"source.php meta.function-call"
+			],
 			"settings": {
-				"background": "#DA2000",
-				"fontStyle": "",
-				"foreground": "#F8F8F0"
+				"foreground": "#864aff"
 			}
 		},
 		{
-			"name": "Invalid deprecated",
-			"scope": "invalid.deprecated",
+			"name": "PHP - Built-ins, Constants",
+			"scope": [
+				"source.php support.function"
+			],
 			"settings": {
-				"background": "#864aff",
-				"foreground": "#F8F8F0"
+				"foreground": "#0080ff"
+			}
+		},
+		{
+			"name": "PHP - Variables",
+			"scope": [
+				"source.php punctuation.definition.variable"
+			],
+			"settings": {
+				"foreground": "#FD971F"
 			}
 		},
 		{
