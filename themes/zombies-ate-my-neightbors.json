@@ -110,8 +110,21 @@
 			}
 		},
 		{
+			"name": "Base",
+			"scope": [
+				"source.ini",
+				"text.html.markdown"
+			],
+			"settings": {
+				"foreground": "#808080"
+			}
+		},
+		{
 			"name": "Comment",
-			"scope": "comment",
+			"scope": [
+				"comment",
+				"comment.line punctuation"
+			],
 			"settings": {
 				"foreground": "#515151"
 			}
