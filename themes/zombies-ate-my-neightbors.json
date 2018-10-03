@@ -1,5 +1,5 @@
 //	#0080ff (Blue)
-// 	#FD971F (Orange)
+// 	#FF8000 (Orange)
 // 	#fff600 (Yellow)
 //	#0eff00 (Green)
 //	#864aff (Purple)
@@ -252,7 +252,7 @@
 			"name": "Function argument",
 			"scope": "variable.parameter",
 			"settings": {
-				"foreground": "#FD971F"
+				"foreground": "#FF8000"
 			}
 		},
 		{
@@ -305,10 +305,10 @@
 		{
 			"name": "CSS/SCSS - Variables",
 			"scope": [
-				"source.css variable"
+				"source.css meta.property-list meta.property-value variable"
 			],
 			"settings": {
-				"foreground": "#FD971F"
+				"foreground": "#FF8000"
 			}
 		},
 		{
@@ -318,7 +318,10 @@
 				"source.css entity.other.attribute-name.id",
 				"source.css entity.other.attribute-name.class",
 				"source.css entity.other.attribute-name.class punctuation.definition.entity",
-				"source.css entity.other.attribute-name.id punctuation.definition.entity"
+				"source.css entity.other.attribute-name.id punctuation.definition.entity",
+				"source.css entity.other.attribute-name.placeholder",
+				"source.css entity.other.attribute-name.placeholder punctuation.definition.entity",
+				"source.css meta.property-list variable"
 			],
 			"settings": {
 				"foreground": "#0eff00"
@@ -345,18 +348,10 @@
 			}
 		},
 		{
-			"name": "PHP - Functions",
-			"scope": [
-				"source.php meta.function-call"
-			],
-			"settings": {
-				"foreground": "#864aff"
-			}
-		},
-		{
 			"name": "PHP - Built-ins, Constants",
 			"scope": [
-				"source.php support.function"
+				"source.php support.function",
+				"source.php meta.function.php"
 			],
 			"settings": {
 				"foreground": "#0080ff"
@@ -368,7 +363,43 @@
 				"source.php punctuation.definition.variable"
 			],
 			"settings": {
-				"foreground": "#FD971F"
+				"foreground": "#FF8000"
+			}
+		},
+		{
+			"name": "PHP - Functions",
+			"scope": [
+				"source.php meta.function-call"
+			],
+			"settings": {
+				"foreground": "#864aff"
+			}
+		},
+		{
+			"name": "PHP - Function Definition",
+			"scope": [
+				"source.php meta.function.php entity.name.function"
+			],
+			"settings": {
+				"foreground": "#0eff00"
+			}
+		},
+		{
+			"name": "Shell",
+			"scope": [
+				"source.shell"
+			],
+			"settings": {
+				"foreground": "#FF8000"
+			}
+		},
+		{
+			"name": "Shell - Functions",
+			"scope": [
+				"source.shell meta.function entity.name.function"
+			],
+			"settings": {
+				"foreground": "#0eff00"
 			}
 		},
 		{
@@ -422,7 +453,7 @@
 			"name": "Markup Lists",
 			"scope": "markup.list",
 			"settings": {
-				"foreground": "#fff600"
+				"foreground": "#808080"
 			}
 		},
 		{
@@ -437,7 +468,7 @@
 			"scope": "markup.inline.raw",
 			"settings": {
 				"fontStyle": "",
-				"foreground": "#FD971F"
+				"foreground": "#FF8000"
 			}
 		},
 		{
