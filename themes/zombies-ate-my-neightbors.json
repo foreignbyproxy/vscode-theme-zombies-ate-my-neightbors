@@ -1,10 +1,3 @@
-//	#0080ff (Blue)
-// 	#FF8000 (Orange)
-// 	#fff600 (Yellow)
-//	#0eff00 (Green)
-//	#864aff (Purple)
-//	#DA2000 (Red)
-//   #161616 background)
 {
 	"type": "dark",
 	"colors": {
@@ -23,14 +16,13 @@
 		"editor.foreground": "#f8f8f2",
 		"editor.lineHighlightBackground": "#161616",
 		"editor.selectionBackground": "#878b9180",
-		"editor.selectionHighlightBackground": "#575b6180",
 		"editorCursor.foreground": "#0080ff",
 		"editorGroup.border": "#414339",
 		"editorGroup.dropBackground": "#41433980",
 		"editorGroupHeader.tabsBackground": "#161616",
 		"editorHoverWidget.background": "#414339",
 		"editorHoverWidget.border": "#75715E",
-		"editorIndentGuide.activeBackground": "#878585",
+		"editorIndentGuide.activeBackground": "#333333",
 		"editorIndentGuide.background": "#212020",
 		"editorLineNumber.activeForeground": "#0080ff",
 		"editorLineNumber.foreground": "#90908a",
@@ -38,7 +30,7 @@
 		"editorSuggestWidget.border": "#75715E",
 		"editorWhitespace.foreground": "#ffffff",
 		"editorWidget.background": "#1e1f1c",
-		"focusBorder": "#75715E",
+		"focusBorder": "#0080ff",
 		"input.background": "#414339",
 		"inputOption.activeBorder": "#75715E",
 		"inputValidation.errorBackground": "#DA2000",
@@ -97,10 +89,11 @@
 		"terminal.ansiYellow": "#fff600",
 		"titleBar.activeBackground": "#1e1f1c",
 		"widget.shadow": "#161616",
-		"editor.wordHighlightBorder": "#4a4a7680",
-		"editor.wordHighlightBackground": "#161616",
-		"editor.wordHighlightStrongBorder": "#4a4a7680",
-        "editor.wordHighlightStrongBackground": "#161616"
+		"editor.findMatchBackground": "#878b9180",
+		"editor.findMatchBorder": "#878b9180",
+		"editor.findMatchHighlightBackground": "#161616",
+		"editor.findMatchHighlightBorder": "#878b9180",
+		"editor.selectionHighlightBorder": "#878b9180"
 	},
 	"tokenColors": [
 		{
@@ -141,7 +134,7 @@
 			}
 		},
 		{
-			"name": "String",
+			"name": "String - Text",
 			"scope": [
 				"string",
 				"string.quoted punctuation.definition.string"
@@ -152,7 +145,10 @@
 		},
 		{
 			"name": "Keyword",
-			"scope": "keyword",
+			"scope": [
+				"keyword",
+				"text.html.handlebars"
+			],
 			"settings": {
 				"foreground": "#808080"
 			}
@@ -204,10 +200,11 @@
 			}
 		},
 		{
-			"name": "React - 'class' + 'extends' ",
+			"name": "JS/React - Support/Built-ins ",
 			"scope": [
 				"meta.class storage.type.class.js",
-				"meta.class storage.modifier.js"
+				"meta.class storage.modifier.js",
+				"source.js support.variable"
 			],
 			"settings": {
 				"foreground": "#0080ff"
@@ -241,8 +238,8 @@
 			"name": "Variable",
 			"scope": [
 				"variable",
-				"support.variable.property.dom.js",
-				"source.js meta.var.expr.js support.variable.property.js"
+				"source.js meta.var.expr.js support.variable.property.js",
+				"source.js support.variable.property"
 			],
 			"settings": {
 				"foreground": "#ff8000"
@@ -285,8 +282,7 @@
 		{
 			"name": "HTML/JSX attribute",
 			"scope": [
-				"meta.tag entity.other.attribute-name",
-				""
+				"meta.tag entity.other.attribute-name"
 			],
 			"settings": {
 				"fontStyle": "",
@@ -305,7 +301,7 @@
 		{
 			"name": "CSS/SCSS - Variables",
 			"scope": [
-				"source.css meta.property-list meta.property-value variable"
+				"source.css.scss variable"
 			],
 			"settings": {
 				"foreground": "#FF8000"
@@ -314,14 +310,17 @@
 		{
 			"name": "CSS/SCSS - Classes and IDs",
 			"scope": [
-				"source.css meta.property-list meta.at-rule.extend",
+				"source.css meta.at-rule.extend",
 				"source.css entity.other.attribute-name.id",
 				"source.css entity.other.attribute-name.class",
 				"source.css entity.other.attribute-name.class punctuation.definition.entity",
 				"source.css entity.other.attribute-name.id punctuation.definition.entity",
 				"source.css entity.other.attribute-name.placeholder",
 				"source.css entity.other.attribute-name.placeholder punctuation.definition.entity",
-				"source.css meta.property-list variable"
+				"source.css variable",
+				"source.css entity.other.attribute-name.parent-selector-suffix",
+				"source.css entity.other.attribute-name.parent-selector-suffix punctuation.definition.entity",
+				"source.css entity.other.attribute-name.pseudo-class"
 			],
 			"settings": {
 				"foreground": "#0eff00"
