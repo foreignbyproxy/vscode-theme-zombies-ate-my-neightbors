@@ -168,13 +168,31 @@
 			}
 		},
 		{
-			"scope": "entity.name.tag.css",
+			"scope": "meta.jsx.children.js",
+			"settings": {
+				"foreground": "#b1b3b0"
+			}
+		},
+		{
+			"scope": [
+				"entity.name.tag.css",
+				"punctuation.separator.comma.js",
+				"punctuation.terminator.statement.js",
+				"support.class.component.js",
+				"punctuation.accessor.js"
+			],
 			"settings": {
 				"foreground": "#808080"
 			}
 		},
 		{
-			"scope": "entity.other.attribute-name",
+			"scope": [
+				"entity.name.type.class.js",
+				"entity.other.inherited-class.js",
+				"meta.method.declaration.js",
+				"meta.definition.method.js entity.name.function.js",
+				"meta.definition.property.js entity.name.function.js"
+			],
 			"settings": {
 				"foreground": "#0eff00"
 			}
@@ -190,6 +208,7 @@
 				"source.css.less entity.other.attribute-name.id",
 				"variable.css",
 				"variable.scss",
+				"entity.other.attribute-name",
 				"entity.other.attribute-name.attribute.scss",
 				"entity.other.attribute-name.scss",
 				"meta.at-rule.extend.scss",
@@ -429,7 +448,7 @@
 				"support.type.property-name.json",
 			],
 			"settings": {
-				"foreground": "#808080"
+				"foreground": "#b1b3b0"
 			}
 		},
 		{
@@ -456,7 +475,7 @@
 		{
 			"scope": "keyword.operator",
 			"settings": {
-				"foreground": "#d4d4d4"
+				"foreground": "#808080"
 			}
 		},
 		{
@@ -502,21 +521,10 @@
 			}
 		},
 		{
-			"name": "coloring of the Java import and package identifiers",
-			"scope": [
-				"storage.modifier.import.java",
-				"variable.language.wildcard.java",
-				"storage.modifier.package.java"
-			],
-			"settings": {
-				"foreground": "#d4d4d4"
-			}
-		},
-		{
 			"name": "this.self",
 			"scope": "variable.language",
 			"settings": {
-				"foreground": "#0080ff"
+				"foreground": "#ff8000"
 			}
 		},
 		{
@@ -610,7 +618,8 @@
 				"variable",
 				"meta.definition.variable.name",
 				"support.variable",
-				"entity.name.variable"
+				"entity.name.variable",
+				"variable.other.constant.js entity.name.function.js"
 			],
 			"settings": {
 				"foreground": "#ff8000"
@@ -622,7 +631,7 @@
 				"meta.object-literal.key"
 			],
 			"settings": {
-				"foreground": "#808080"
+				"foreground": "#b1b3b0"
 			}
 		},
 		{
