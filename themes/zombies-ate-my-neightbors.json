@@ -453,7 +453,7 @@
 		},
 		{
 			"scope": [
-				"meta.brace", 
+				"meta.brace",
 				"punctuation.definition.block"
 			],
 			"settings": {
@@ -699,8 +699,51 @@
 			"settings": {
 				"foreground": "#808080"
 			}
+		},
+		{
+			"scope": "heading.1.markdown",
+			"settings": {
+				"foreground": "#ff8000"
+			}
+		},
+		{
+			"scope": "heading.2.markdown",
+			"settings": {
+				"foreground": "#0eff00"
+			}
+		},
+		{
+			"scope": "heading.3.markdown",
+			"settings": {
+				"foreground": "#0080ff"
+			}
+		},
+		{
+			"scope": "heading.4.markdown",
+			"settings": {
+				"foreground": "#864aff"
+			}
+		},
+		{
+			"scope": "markup.bold.markdown",
+			"settings": {
+				"foreground": "#444444",
+				"fontStyle": "bold underline"
+			}
+		},
+		{
+			"scope": "markup.bold.markdown punctuation.definition.bold.markdown",
+			"settings": {
+				"foreground": "#444444",
+				"fontStyle": ""
+			}
+		},
+		{
+			"scope": "markup.italic.markdown",
+			"settings": {
+				"foreground": "#777777",
+				"fontStyle": "italic"
+			}
 		}
-
-		
 	]
 }
